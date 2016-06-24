@@ -106,12 +106,12 @@ function prompt_user -d "Display current user if different from $default_user"
       else
         set USER_PROMPT $USER
       end
-      prompt_segment black yellow $USER_PROMPT
+      prompt_segment blue white $USER_PROMPT
     end
   else
     get_hostname
     if [ $HOSTNAME_PROMPT ]
-      prompt_segment black yellow $HOSTNAME_PROMPT
+      prompt_segment blue white $HOSTNAME_PROMPT
     end
   end
 end
@@ -124,7 +124,7 @@ function get_hostname -d "Set current hostname to prompt variable $HOSTNAME_PROM
 end
 
 function prompt_dir -d "Display the current directory"
-  prompt_segment blue black (prompt_pwd)
+  prompt_segment cyan black (prompt_pwd)
 end
 
 
